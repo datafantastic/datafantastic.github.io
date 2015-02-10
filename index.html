@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Polymer WebApp</title>
+  <title>Datafantastic</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -14,22 +14,73 @@
   <!-- endbuild-->
 
   <script src="bower_components/platform/platform.js"></script>
+  <script src="bower_components/marked/lib/marked.js"></script>
   <!-- build:vulcanized elements/elements.vulcanized.html -->
   <link rel="import" href="elements/elements.html">
   <!-- endbuild-->
+
 </head>
 
-<body unresolved>
+<body  fullbleed layout vertical>
+  <core-scroll-header-panel flex>
+    <core-toolbar class="tall">
+        <core-icon-button icon="arrow-back"></core-icon-button>
+	<div flex></div>
+        <core-icon-button icon="search"></core-icon-button>
+      <core-icon-button icon="more-vert"></core-icon-button>
+           <div class="bottom indent title">Data Science</div>
+    </core-toolbar>
 
-  <div class="hero-unit">
-    <yo-greeting></yo-greeting>
-    <p>You now have</p>
-    <yo-list></yo-list>
+    <div class="container" layout vertical center>
+      <h2 id="introduction-r">R</h2>
+        <p>
+        R is a programming language for statistical computing that was first released in 1993.
+	It was created by
+	<a href="http://en.wikipedia.org/wiki/Ross_Ihaka">Ross Ihaka</a>
+	and
+	<a href="http://en.wikipedia.org/wiki/Robert_Gentleman_(statistician)">Robert Gentleman</a>
+	as an open source alternative to the proprietary 	
+	<a href="http://en.wikipedia.org/wiki/S_(programming_language)">S</a>
+	language.
+	<a href="http://en.wikipedia.org/wiki/S_(programming_language)">S</a>
+	is a statistical programming language developed by
+	<a href="http://en.wikipedia.org/wiki/John_Chambers_(statistician)">John Chambers</a>
+       	while he was working at
+	<a href="http://en.wikipedia.org/wiki/Bell_Labs">Bell Laboratories</a>.
+	R is very popular among data scientists.
+        </p>
+    </div>
+
+    <div class="container" layout vertical center>
+      <post-list show="all"></post-list>
+    </div>
+  <footer>
+	  <!--
+	  <div>
+		   <p id="copyright">&copy; 2014 </p>
+	  </div>
+	-->
+  </footer>
+
+  </core-scroll-header-panel>
+
   </div>
 
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
   <!-- endbuild-->
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57008925-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
 </body>
 
 </html>
